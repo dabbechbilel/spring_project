@@ -7,13 +7,13 @@
 	href="webjars/bootstrap/4.3.1/css/bootstrap.min.css" />
 <head>
 <meta charset="utf-8">
-<title>Liste des Enseignants</title>
+<title>Liste des Weapons</title>
 </head>
 <body>
 	<div layout:fragment="Mycontent">
 		<div class="container mt-5">
 			<div class="card">
-				<div class="card-header">Liste des Enseignants</div>
+				<div class="card-header">Liste des Weapons</div>
 				<div class="card-body">
 
 					<form th:action="@{/search-by-name}" method="get">
@@ -28,7 +28,7 @@
 					<form th:action="@{/search-by-category}" method="get">
 						<div class="mb-3">
 							<div class="form-group">
-								<label class="control-label">Specialité :</label> 
+								<label class="control-label">Category : :</label> 
 								<select name="id" class="form-control"  >
 									<option th:each="e:${categorys}" th:value="${e.idCategory}" th:text="${e.nameCategory}"></option>
 								</select>
@@ -42,10 +42,10 @@
 					<table class="table table-striped">
 						<tr>
 							<th>ID</th>
-							<th>name Enseignant</th>
-							<th>Salaire</th>
-							<th>Date d'embauche</th>
-							<th>Specialité</th>
+							<th>name Weapon</th>
+							<th>Prix</th>
+							<th>Date de Creation</th>
+							<th>Category</th>
 
 						</tr>
 						<tr th:each="e:${weapons}">

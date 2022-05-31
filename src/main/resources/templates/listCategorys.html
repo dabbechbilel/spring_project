@@ -7,21 +7,21 @@
 	href="webjars/bootstrap/4.3.1/css/bootstrap.min.css" />
 <head>
 <meta charset="utf-8">
-<title>Liste des Specilates</title>
+<title>Liste des Weapons</title>
 </head>
 <body>
 	<div layout:fragment="Mycontent">
 		<div class="container mt-5">
 			<div class="card">
-				<div class="card-header">Liste des Specilates</div>
+				<div class="card-header">Liste des Weapons</div>
 				<div class="card-body">
 
 					
 					<table class="table table-striped">
 						<tr>
 							<th>ID</th>
-							<th>Nom de specialité</th>
-							<th>description de la specialité</th>
+							<th>Nom de Category</th>
+							<th>description de la Category</th>
 						</tr>
 						<tr th:each="s:${categorys}">
 							<td th:text="${s.idCategory}"></td>
